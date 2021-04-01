@@ -9,7 +9,6 @@ class XylophoneApp extends StatefulWidget {
 }
 
 class _XylophoneAppState extends State<XylophoneApp> {
-  var node = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,8 +28,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 1;
-                    ringNode(node);
+                    ringNode(1);
                   },
                   child: Container(
                     color: Colors.red,
@@ -40,8 +38,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 2;
-                    ringNode(node);
+                    ringNode(2);
                   },
                   child: Container(
                     color: Colors.green,
@@ -51,8 +48,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 3;
-                    ringNode(node);
+                    ringNode(3);
                   },
                   child: Container(
                     color: Colors.yellow,
@@ -62,8 +58,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 4;
-                    ringNode(node);
+                    ringNode(4);
                   },
                   child: Container(
                     color: Colors.blue,
@@ -73,8 +68,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 5;
-                    ringNode(node);
+                    ringNode(5);
                   },
                   child: Container(
                     color: Colors.orange,
@@ -84,8 +78,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 6;
-                    ringNode(node);
+                    ringNode(6);
                   },
                   child: Container(
                     color: Colors.lightGreenAccent,
@@ -95,8 +88,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    var node = 7;
-                    ringNode(node);
+                    ringNode(7);
                   },
                   child: Container(
                     color: Colors.cyanAccent,
