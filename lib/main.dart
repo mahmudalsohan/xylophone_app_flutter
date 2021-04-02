@@ -25,76 +25,13 @@ class _XylophoneAppState extends State<XylophoneApp> {
         body: SafeArea(
           child: Column(
             children: [
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(1);
-                  },
-                  child: Container(
-                    color: Colors.red,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(2);
-                  },
-                  child: Container(
-                    color: Colors.green,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(3);
-                  },
-                  child: Container(
-                    color: Colors.yellow,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(4);
-                  },
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(5);
-                  },
-                  child: Container(
-                    color: Colors.orange,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(6);
-                  },
-                  child: Container(
-                    color: Colors.lightGreenAccent,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    ringNode(7);
-                  },
-                  child: Container(
-                    color: Colors.cyanAccent,
-                  ),
-                ),
-              ),
+              buildKey(node: 1, color: Colors.red),
+              buildKey(node: 2, color: Colors.orange),
+              buildKey(node: 3, color: Colors.yellow),
+              buildKey(node: 4, color: Colors.green),
+              buildKey(node: 5, color: Colors.blue),
+              buildKey(node: 6, color: Colors.brown),
+              buildKey(node: 7, color: Colors.blueGrey),
             ],
           ),
         ),
@@ -105,5 +42,18 @@ class _XylophoneAppState extends State<XylophoneApp> {
   void ringNode(node) {
     final player = AudioCache();
     player.play('note$node.wav');
+  }
+
+  Expanded buildKey({int node, MaterialColor color}) {
+    return Expanded(
+      child: TextButton(
+        onPressed: () {
+          ringNode(node);
+        },
+        child: Container(
+          color: color,
+        ),
+      ),
+    );
   }
 }
